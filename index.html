@@ -1,191 +1,183 @@
 <!DOCTYPE html>
 <html lang="en" class="h-full">
 <head>
-  <!-- Add content to _includes/head-top.html to include here -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.793575946596">
+    <!-- Add content to _includes/head-top.html to include here -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.793575946596">
 
-  <!-- See retype.com -->
-  <meta name="generator" content="Retype 3.6.0">
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 3.6.0">
 
-  <!-- Primary Meta Tags -->
-  <title>Branimo API Documentation</title>
-  <meta name="title" content="Branimo API Documentation">
-  <meta name="description" content="Documentation for Branimo API endpoints.">
+    <!-- Primary Meta Tags -->
+    <title>Branimo API Documentation</title>
+    <meta name="title" content="Branimo API Documentation">
+    <meta name="description" content="Documentation for Branimo API endpoints.">
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://docs.branimo.com">
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.branimo.com">
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://docs.branimo.com">
-  <meta property="og:title" content="Branimo API Documentation">
-  <meta property="og:description" content="Documentation for Branimo API endpoints.">
-  <meta property="og:image" content="/static/api-hero.png">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.branimo.com">
+    <meta property="og:title" content="Branimo API Documentation">
+    <meta property="og:description" content="Documentation for Branimo API endpoints.">
+    <meta property="og:image" content="/static/api-hero.png">
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://docs.branimo.com">
-  <meta property="twitter:title" content="Branimo API Documentation">
-  <meta property="twitter:description" content="Documentation for Branimo API endpoints.">
-  <meta property="twitter:image" content="/static/api-hero.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://docs.branimo.com">
+    <meta property="twitter:title" content="Branimo API Documentation">
+    <meta property="twitter:description" content="Documentation for Branimo API endpoints.">
+    <meta property="twitter:image" content="/static/api-hero.png">
 
-  <script data-cfasync="false">
-    (function () {
-      var el = document.documentElement,
-          m = localStorage.getItem("doc_theme"),
-          wm = window.matchMedia;
-      if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) {
-          el.classList.add("dark")
-      } else {
-          el.classList.remove("dark")
+    <script data-cfasync="false">
+      (function () {
+          var el = document.documentElement,
+              m = localStorage.getItem("doc_theme"),
+              wm = window.matchMedia;
+          if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) {
+              el.classList.add("dark")
+          } else {
+              el.classList.remove("dark")
+          }
+      })();
+    </script>
+
+    <link href="/resources/css/retype.css?v=3.6.0.793575946596" rel="stylesheet">
+    <script data-cfasync="false" src="/resources/js/config.js?v=3.6.0.793575946596" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="/resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.6.0.793575946596" data-turbo-eval="false" defer></script>
+    <!-- Add content to _includes/head.html to include here -->
+    <link href="/static/styles.css?v=3.6.0.793575946596" rel="stylesheet">
+
+    <!-- Optional custom CSS for increased readability -->
+    <style>
+      .docs-markdown h1,
+      .docs-markdown h2,
+      .docs-markdown h3 {
+        color: #2d3748;
       }
-    })();
-  </script>
-
-  <link href="/resources/css/retype.css?v=3.6.0.793575946596" rel="stylesheet">
-  <script data-cfasync="false" src="/resources/js/config.js?v=3.6.0.793575946596" data-turbo-eval="false" defer></script>
-  <script data-cfasync="false" src="/resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-  <script id="lunr-js" data-cfasync="false" src="/resources/js/lunr.js?v=3.6.0.793575946596" data-turbo-eval="false" defer></script>
-  <!-- Add content to _includes/head.html to include here -->
-  <link href="/static/styles.css?v=3.6.0.793575946596" rel="stylesheet">
-  
-  <!-- Optional: You can add additional custom CSS to improve visibility -->
-  <style>
-    /* Increase font sizes for better visibility */
-    .docs-markdown h1,
-    .docs-markdown h2,
-    .docs-markdown h3 {
-      color: #2d3748;
-    }
-    .docs-markdown p,
-    .docs-markdown code,
-    .docs-markdown pre {
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-  </style>
+      .docs-markdown p,
+      .docs-markdown code,
+      .docs-markdown pre {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+    </style>
 </head>
 <body>
-  <!-- Add content to _includes/body-top.html to include here -->
-
-  <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
-    <!-- Header -->
-    <header id="docs-site-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
-      <div class="container relative flex items-center justify-between pr-6">
-        <!-- Mobile menu button (optional) -->
-        <button v-cloak class="skeleton docs-mobile-menu-button hidden md:flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5">
-          <svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation">
-            <g fill="currentColor">
-              <path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path>
-            </g>
-          </svg>
-        </button>
-        <!-- Logo -->
-        <div class="flex items-center justify-between h-full py-2">
-          <a id="docs-site-logo" href="/" class="flex items-center leading-snug text-2xl">
-            <span class="grow-0 shrink-0 overflow-hidden">
-              <img class="max-h-10 dark:hidden md:inline-block" src="static/branimo (400 x 100 px) (3).gif">
-              <img class="max-h-10 hidden dark:inline-block" src="static/branimo (400 x 100 px).gif">
-            </span>
-          </a>
-          <span class="hidden px-2 py-1 ml-4 text-sm font-semibold bg-root-logo-label-bg rounded-sm md:inline-block">API</span>
-        </div>
-        <!-- Removed extra header controls for simplicity -->
-      </div>
-    </header>
+    <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+        <!-- Header -->
+        <header id="docs-site-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+            <div class="container relative flex items-center justify-between pr-6">
+                <button class="skeleton docs-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation">
+                        <g fill="currentColor">
+                            <path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path>
+                        </g>
+                    </svg>
+                </button>
+                <div id="docs-sidebar-toggle"></div>
+                <div class="flex items-center justify-between h-full py-2">
+                    <a id="docs-site-logo" href="/" class="flex items-center leading-snug text-2xl">
+                        <span class="grow-0 shrink-0 overflow-hidden">
+                            <img class="max-h-10 dark:hidden md:inline-block" src="static/branimo (400 x 100 px) (3).gif">
+                            <img class="max-h-10 hidden dark:inline-block" src="static/branimo (400 x 100 px).gif">
+                        </span>
+                    </a>
+                    <span class="hidden px-2 py-1 ml-4 text-sm font-semibold bg-root-logo-label-bg rounded-sm md:inline-block">API</span>
+                </div>
+            </div>
+        </header>
     
-    <div class="container relative flex bg-white">
-      <!-- Left Sidebar: API Endpoints -->
-      <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-gray-100 border-r border-gray-200 sidebar top-20 w-75 h-screen md:sticky transition-transform dark:bg-dark-800 dark:border-dark-650">
-        <!-- Filter input (optional) -->
-        <div class="flex items-center h-16 px-6">
-          <input class="w-full h-8 px-3 py-2 bg-white border border-gray-200 rounded text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter Endpoints">
-        </div>
-        <!-- Sidebar Menu: Endpoints -->
-        <div class="pl-6 mt-1 mb-4">
-          <div class="mb-4">
-            <h3 class="text-sm font-bold text-gray-700 dark:text-dark-300">Endpoints</h3>
-            <ul class="mt-2 space-y-2">
-              <li><a href="#get-brand" class="text-sm text-blue-500 hover:text-blue-700">POST /getBrand</a></li>
-              <li><a href="#get-personalized-contents" class="text-sm text-blue-500 hover:text-blue-700">POST /getPersonalizedContents</a></li>
-            </ul>
-          </div>
-        </div>
-        <!-- Removed extra folders like "Introduction" and "Authentication" -->
-        <div class="shrink-0 mt-auto bg-transparent dark:border-dark-650">
-          <a class="flex items-center justify-center h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150" target="_blank" href="https://retype.com/" rel="noopener">
-            <span class="text-xs whitespace-nowrap">Powered by Retype</span>
-          </a>
-        </div>
-      </div>
-      
-      <!-- Main Documentation Content -->
-      <div class="grow min-w-0 dark:bg-dark-850 ml-75">
-        <div class="flex">
-          <div class="min-w-0 p-4 grow md:px-16">
-            <main class="relative pb-12 lg:pt-2">
-              <div class="docs-markdown" id="docs-content">
-                <!-- Documentation Title -->
-                <doc-anchor-target id="branimo-api-doc" class="break-words">
-                  <h1>
-                    <doc-anchor-trigger class="header-anchor-trigger" to="#branimo-api-doc">#</doc-anchor-trigger>
-                    <span>Branimo API Documentation</span>
-                  </h1>
-                </doc-anchor-target>
-                
-                <!-- POST /getBrand Endpoint -->
-                <section id="get-brand" class="mt-8">
-                  <h2>
-                    <doc-anchor-trigger class="header-anchor-trigger" to="#get-brand">#</doc-anchor-trigger>
-                    <span>POST /getBrand</span>
-                  </h2>
-                  <p>This endpoint allows you to retrieve brand data based on the provided URL.</p>
-                </section>
-                
-                <section id="brand-request-description" class="mt-8">
-                  <h2>
-                    <doc-anchor-trigger class="header-anchor-trigger" to="#brand-request-description">#</doc-anchor-trigger>
-                    <span>Request Description</span>
-                  </h2>
-                  <p>Send a HTTP POST request with a JSON body that includes a <code>"url"</code> key.</p>
-                </section>
-                
-                <section id="brand-request-body" class="mt-8">
-                  <h2>
-                    <doc-anchor-trigger class="header-anchor-trigger" to="#brand-request-body">#</doc-anchor-trigger>
-                    <span>Request Body</span>
-                  </h2>
-                  <p><strong>url</strong> (string): The URL for which brand data is to be retrieved.</p>
-                  <doc-codeblock>
-                    <pre class="language-json" v-pre>
+        <div class="container relative flex bg-white">
+            <!-- Left Sidebar: API Endpoints -->
+            <div class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-gray-100 border-r border-gray-200 sidebar top-20 w-75 h-screen md:sticky transition-transform dark:bg-dark-800 dark:border-dark-650">
+                <div class="flex items-center h-16 px-6">
+                    <input class="w-full h-8 px-3 py-2 bg-white border border-gray-200 rounded text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter Endpoints">
+                </div>
+                <div class="pl-6 mt-1 mb-4">
+                    <div class="mb-4">
+                        <h3 class="text-sm font-bold text-gray-700 dark:text-dark-300">Endpoints</h3>
+                        <ul class="mt-2 space-y-2">
+                            <li><a href="#get-brand" class="text-sm text-blue-500 hover:text-blue-700">POST /getBrand</a></li>
+                            <li><a href="#get-personalized-contents" class="text-sm text-blue-500 hover:text-blue-700">POST /getPersonalizedContents</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="shrink-0 mt-auto bg-transparent dark:border-dark-650">
+                    <a class="flex items-center justify-center h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by Retype</span>
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Main Documentation Content -->
+            <div class="grow min-w-0 dark:bg-dark-850 ml-75">
+                <div class="flex">
+                    <div class="min-w-0 p-4 grow md:px-16">
+                        <main class="relative pb-12 lg:pt-2">
+                            <div class="docs-markdown" id="docs-content">
+                                <!-- Documentation Title -->
+                                <doc-anchor-target id="branimo-api-doc" class="break-words">
+                                    <h1>
+                                        <doc-anchor-trigger class="header-anchor-trigger" to="#branimo-api-doc">#</doc-anchor-trigger>
+                                        <span>Branimo API Documentation</span>
+                                    </h1>
+                                </doc-anchor-target>
+                                
+                                <!-- POST /getBrand Endpoint -->
+                                <section id="get-brand" class="mt-8">
+                                    <h2>
+                                        <doc-anchor-trigger class="header-anchor-trigger" to="#get-brand">#</doc-anchor-trigger>
+                                        <span>POST /getBrand</span>
+                                    </h2>
+                                    <p>This endpoint allows you to retrieve brand data based on the provided URL.</p>
+                                </section>
+                                
+                                <section id="brand-request-description" class="mt-8">
+                                    <h2>
+                                        <doc-anchor-trigger class="header-anchor-trigger" to="#brand-request-description">#</doc-anchor-trigger>
+                                        <span>Request Description</span>
+                                    </h2>
+                                    <p>Send a HTTP POST request with a JSON body that includes a <code>"url"</code> key.</p>
+                                </section>
+                                
+                                <section id="brand-request-body" class="mt-8">
+                                    <h2>
+                                        <doc-anchor-trigger class="header-anchor-trigger" to="#brand-request-body">#</doc-anchor-trigger>
+                                        <span>Request Body</span>
+                                    </h2>
+                                    <p><strong>url</strong> (string): The URL for which brand data is to be retrieved.</p>
+                                    <doc-codeblock>
+                                        <pre class="language-json" v-pre>
 {
   "url": "https://example.com"
 }
-                    </pre>
-                  </doc-codeblock>
-                </section>
-                
-                <section id="brand-request-headers" class="mt-8">
-                  <h2>
-                    <doc-anchor-trigger class="header-anchor-trigger" to="#brand-request-headers">#</doc-anchor-trigger>
-                    <span>Request Headers</span>
-                  </h2>
-                  <ul class="list-disc ml-6">
-                    <li><strong>APP-ID:</strong> [[YOUR-APP-ID]]</li>
-                    <li><strong>API-KEY:</strong> [[YOUR-API-KEY]]</li>
-                  </ul>
-                </section>
-                
-                <section id="brand-response" class="mt-8">
-                  <h2>
-                    <doc-anchor-trigger class="header-anchor-trigger" to="#brand-response">#</doc-anchor-trigger>
-                    <span>Response</span>
-                  </h2>
-                  <p>The response is returned in JSON format with a <strong>200</strong> status code:</p>
-                  <doc-codeblock>
-                    <pre class="language-json" v-pre>
+                                        </pre>
+                                    </doc-codeblock>
+                                </section>
+                                
+                                <section id="brand-request-headers" class="mt-8">
+                                    <h2>
+                                        <doc-anchor-trigger class="header-anchor-trigger" to="#brand-request-headers">#</doc-anchor-trigger>
+                                        <span>Request Headers</span>
+                                    </h2>
+                                    <ul class="list-disc ml-6">
+                                        <li><strong>APP-ID:</strong> [[YOUR-APP-ID]]</li>
+                                        <li><strong>API-KEY:</strong> [[YOUR-API-KEY]]</li>
+                                    </ul>
+                                </section>
+                                
+                                <section id="brand-response" class="mt-8">
+                                    <h2>
+                                        <doc-anchor-trigger class="header-anchor-trigger" to="#brand-response">#</doc-anchor-trigger>
+                                        <span>Response</span>
+                                    </h2>
+                                    <p>The response is returned in JSON format with a <strong>200</strong> status code:</p>
+                                    <doc-codeblock>
+                                        <pre class="language-json" v-pre>
 {
   "message": "",
   "brand_data": {
@@ -213,61 +205,61 @@
     "gpt_clientele": ""
   }
 }
-                    </pre>
-                  </doc-codeblock>
-                </section>
-                
-                <!-- POST /getPersonalizedContents Endpoint -->
-                <section id="get-personalized-contents" class="mt-8">
-                  <h2>
-                    <doc-anchor-trigger class="header-anchor-trigger" to="#get-personalized-contents">#</doc-anchor-trigger>
-                    <span>POST /getPersonalizedContents</span>
-                  </h2>
-                  <p>This endpoint retrieves personalized contents based on the provided target brand URL and types.</p>
-                </section>
-                
-                <section id="personalized-request-description" class="mt-8">
-                  <h2>
-                    <doc-anchor-trigger class="header-anchor-trigger" to="#personalized-request-description">#</doc-anchor-trigger>
-                    <span>Request Description</span>
-                  </h2>
-                  <p>Send a HTTP POST request with a JSON payload containing the <code>target_brand_url</code>, <code>types</code>, and <code>regenerate</code> keys.</p>
-                </section>
-                
-                <section id="personalized-request-body" class="mt-8">
-                  <h2>
-                    <doc-anchor-trigger class="header-anchor-trigger" to="#personalized-request-body">#</doc-anchor-trigger>
-                    <span>Request Body</span>
-                  </h2>
-                  <doc-codeblock>
-                    <pre class="language-json" v-pre>
+                                        </pre>
+                                    </doc-codeblock>
+                                </section>
+                                
+                                <!-- POST /getPersonalizedContents Endpoint -->
+                                <section id="get-personalized-contents" class="mt-8">
+                                    <h2>
+                                        <doc-anchor-trigger class="header-anchor-trigger" to="#get-personalized-contents">#</doc-anchor-trigger>
+                                        <span>POST /getPersonalizedContents</span>
+                                    </h2>
+                                    <p>This endpoint retrieves personalized contents based on the provided target brand URL and types.</p>
+                                </section>
+                                
+                                <section id="personalized-request-description" class="mt-8">
+                                    <h2>
+                                        <doc-anchor-trigger class="header-anchor-trigger" to="#personalized-request-description">#</doc-anchor-trigger>
+                                        <span>Request Description</span>
+                                    </h2>
+                                    <p>Send a HTTP POST request with a JSON payload containing the <code>target_brand_url</code>, <code>types</code>, and <code>regenerate</code> keys.</p>
+                                </section>
+                                
+                                <section id="personalized-request-body" class="mt-8">
+                                    <h2>
+                                        <doc-anchor-trigger class="header-anchor-trigger" to="#personalized-request-body">#</doc-anchor-trigger>
+                                        <span>Request Body</span>
+                                    </h2>
+                                    <doc-codeblock>
+                                        <pre class="language-json" v-pre>
 {
   "target_brand_url": "https://hoi.in",
   "types": "presentation,email,linkedin",
   "regenerate": false
 }
-                    </pre>
-                  </doc-codeblock>
-                </section>
-                
-                <section id="personalized-request-headers" class="mt-8">
-                  <h2>
-                    <doc-anchor-trigger class="header-anchor-trigger" to="#personalized-request-headers">#</doc-anchor-trigger>
-                    <span>Request Headers</span>
-                  </h2>
-                  <ul class="list-disc ml-6">
-                    <li><strong>Content-Type:</strong> application/json</li>
-                  </ul>
-                </section>
-                
-                <section id="personalized-response" class="mt-8">
-                  <h2>
-                    <doc-anchor-trigger class="header-anchor-trigger" to="#personalized-response">#</doc-anchor-trigger>
-                    <span>Response</span>
-                  </h2>
-                  <p>The response is returned in JSON format with the following schema:</p>
-                  <doc-codeblock>
-                    <pre class="language-json" v-pre>
+                                        </pre>
+                                    </doc-codeblock>
+                                </section>
+                                
+                                <section id="personalized-request-headers" class="mt-8">
+                                    <h2>
+                                        <doc-anchor-trigger class="header-anchor-trigger" to="#personalized-request-headers">#</doc-anchor-trigger>
+                                        <span>Request Headers</span>
+                                    </h2>
+                                    <ul class="list-disc ml-6">
+                                        <li><strong>Content-Type:</strong> application/json</li>
+                                    </ul>
+                                </section>
+                                
+                                <section id="personalized-response" class="mt-8">
+                                    <h2>
+                                        <doc-anchor-trigger class="header-anchor-trigger" to="#personalized-response">#</doc-anchor-trigger>
+                                        <span>Response</span>
+                                    </h2>
+                                    <p>The response is returned in JSON format with the following schema:</p>
+                                    <doc-codeblock>
+                                        <pre class="language-json" v-pre>
 {
   "type": "object",
   "properties": {
@@ -304,24 +296,23 @@
     "current_balance": { "type": "integer" }
   }
 }
-                    </pre>
-                  </doc-codeblock>
-                </section>
-                
-                <footer class="clear-both mt-8">
-                  <div class="flex flex-wrap items-center justify-between">
-                    <!-- Optional Footer Content -->
-                  </div>
-                </footer>
-                <!-- End API Documentation Main Content -->
-              </div>
-            </main>
-          </div>
-        </div>
-      </div>
-    </div>
+                                        </pre>
+                                    </doc-codeblock>
+                                </section>
+                                
+                                <footer class="clear-both mt-8">
+                                  <div class="flex flex-wrap items-center justify-between">
+                                    <!-- Optional Footer Content -->
+                                  </div>
+                                </footer>
+                                <!-- End API Documentation Main Content -->
+                              </div>
+                            </main>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
     
-    <!-- Remove unnecessary right sidebar, mobile search, and back-to-top components -->
     <div id="docs-overlay-target"></div>
     
     <script data-cfasync="false">
